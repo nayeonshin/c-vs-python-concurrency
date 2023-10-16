@@ -37,6 +37,7 @@ int main() {
     WaitForSingleObject(pi.hProcess, INFINITE);
 
     printf(MESSAGE, "has exited.\n");
+    printf("Parent process has excited.\n");
 
     // Closes process and thread handles to avoid resource leaks
     CloseHandle(pi.hProcess);

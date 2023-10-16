@@ -2,6 +2,7 @@
 #include <windows.h> // Windows API header
 
 const char *MESSAGE = "Thread %d: Hello, World!\n";
+// TODO: create a constant for error message
 
 /**
  * @param lpParam `LPVOID` stands for Long Pointer to VOID.
@@ -14,6 +15,9 @@ const char *MESSAGE = "Thread %d: Hello, World!\n";
  */
 DWORD WINAPI print_thread1_hello(LPVOID lpParam)
 {
+    // TODO: Loop to see how the two threads take turns running
+    // sleep
+    // count up to 10,000 instead of sleeping
     printf(MESSAGE, 1);
 }
 
