@@ -17,14 +17,16 @@ const char *ERROR_MESSAGE = "Thread %d: error\n";
  */
 DWORD WINAPI print_thread1_hello(LPVOID lpParam)
 {
-    for (int i = 0; i < LOOP_COUNT; i++) {
+    for (int i = 0; i < LOOP_COUNT; i++)
+    {
         printf(HELLO_MESSAGE, 1);
     }
 }
 
 DWORD WINAPI print_thread2_hello(LPVOID lpParam)
 {
-    for (int i = 0; i < LOOP_COUNT; i++) {
+    for (int i = 0; i < LOOP_COUNT; i++)
+    {
         printf(HELLO_MESSAGE, 2);
     }
 }
