@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <windows.h> // Windows API header
 
-const char *MESSAGE = "Thread %d: Hello, World!\n";
-// TODO: create a constant for error message
+#define LOOP_COUNT 10000
+
+const char *HELLO_MESSAGE = "Thread %d: Hello, World!\n";
+const char *ERROR_MESSAGE = "Thread %d: error\n";
 
 /**
  * @param lpParam `LPVOID` stands for Long Pointer to VOID.
@@ -15,15 +17,16 @@ const char *MESSAGE = "Thread %d: Hello, World!\n";
  */
 DWORD WINAPI print_thread1_hello(LPVOID lpParam)
 {
-    // TODO: Loop to see how the two threads take turns running
-    // sleep
-    // count up to 10,000 instead of sleeping
-    printf(MESSAGE, 1);
+    for (int i = 0; i < LOOP_COUNT; i++) {
+        printf(HELLO_MESSAGE, 1);
+    }
 }
 
 DWORD WINAPI print_thread2_hello(LPVOID lpParam)
 {
-    printf(MESSAGE, 2);
+    for (int i = 0; i < LOOP_COUNT; i++) {
+        printf(HELLO_MESSAGE, 2);
+    }
 }
 
 int main()
@@ -44,7 +47,7 @@ int main()
     if (thread1 == NULL)
     {
         // Prints an error message to the standard error output
-        fprintf(stderr, "Thread 1: error\n");
+        fprintf(stderr, ERROR_MESSAGE, 1);
         return 1;
     }
 
@@ -52,7 +55,7 @@ int main()
     thread2 = CreateThread(NULL, 0, print_thread2_hello, NULL, 0, NULL);
     if (thread2 == NULL)
     {
-        fprintf(stderr, "Thread 2: error\n");
+        fprintf(stderr, ERROR_MESSAGE, 2);
         return 1;
     }
 

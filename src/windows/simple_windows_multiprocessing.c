@@ -2,6 +2,7 @@
 #include <windows.h>
 
 const char* MESSAGE = "Parent process: Child process %s\n.";
+const char* PROGRAM_NAME = "notepad.exe";
 
 int main() {
     // Structures used to store information about the new process
@@ -17,7 +18,7 @@ int main() {
     // If it fails
     if (!CreateProcess(
         NULL,          // Application name
-        "notepad.exe", // Command to run
+        PROGRAM_NAME, // Command to run
         NULL,          // Process security attributes
         NULL,          // Thread security attributes
         FALSE,         // Inherit handles from the parent process
