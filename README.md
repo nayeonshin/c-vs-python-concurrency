@@ -41,7 +41,7 @@ MULTITHREADING - sum: 500000000500000000
 
 - The actual computation of the sum within the `calculate_sum_in_range()` function in `extended_concurrency.py` is still serialized.
   - The GIL serializes the two threads' access to the Python interpreter and the execution of Python bytecode, meaning that one thread has to wait for the other to finish its calculation before it can proceed.
-  - While the threads can perform other operations concurrently, such as function calls, print statements, and so on, the actual computation of the sum (the sum(range(start, end + 1)) part) is restricted by the GIL.
+  - While the threads can perform other operations concurrently, such as function calls, print statements, and so on, the actual computation of the sum (the `sum(range(start, end + 1))` part) is restricted by the GIL.
 - In other words, while the threads can run concurrently for I/O-bound tasks, when it comes to CPU-bound tasks like calculating the sum, the GIL prevents full utilization of multiple CPU cores.
 - In this specific case, multithreading may not provide significant performance benefits for CPU-bound tasks due to the GIL.
 
