@@ -37,7 +37,7 @@ MULTIPROCESSING - child sum: 125000000250000000
 MULTITHREADING - sum: 500000000500000000
 ```
 
-# GIL (Global Interpreter Lock)
+## GIL (Global Interpreter Lock)
 
 - The actual computation of the sum within the `calculate_sum_in_range()` function in `extended_concurrency.py` is still serialized.
   - The GIL serializes the two threads' access to the Python interpreter and the execution of Python bytecode, meaning that one thread has to wait for the other to finish its calculation before it can proceed.
