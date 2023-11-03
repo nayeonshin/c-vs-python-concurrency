@@ -47,4 +47,10 @@ MULTITHREADING - sum: 500000000500000000
 
 ## TODOs
 
-- [ ] Research on how to analyze the performance metrics
+- [ ] Research on how to analyze the performance metrics (in progress)
+  - C
+    - Execution time: `clock()` or `gettimeofday()` to record timestamps
+    - CPU utilization: system calls or libraries like `getrusage` or `clock_gettime`.
+  - Python
+    - Execution time: `timeit` module or third-party libraries like `pytest-benchmark` and `perf`
+    - CPU utilization: `psutil` library, which provides functions to retrieve CPU usage
