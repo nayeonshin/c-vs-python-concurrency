@@ -54,3 +54,4 @@ MULTITHREADING - sum: 500000000500000000
   - Python
     - Execution time: `timeit` module or third-party libraries like `pytest-benchmark` and `perf`
     - CPU utilization: `psutil` library, which provides functions to retrieve CPU usage
+  - Execution time comparison, CPU utilization, thread activity, GIL contention, profiling and line-by-line analysis
