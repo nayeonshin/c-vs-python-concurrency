@@ -46,7 +46,8 @@ long long calculate_sum_in_range(long long start, long long end) {
 // Function to be execute by a single thread
 void *calculate(void *arg) {
     long long *params = (long long*) arg;
-    params[2] = calculate_sum_in_range(params[0], params[1]);
+    long long sum = calculate_sum_in_range(params[0], params[1]);
+    printf("MULTITHREADING - sum: %lld\n", sum);
     return NULL;
 }
 
@@ -88,9 +89,9 @@ int sum_using_multithreading(struct Bounds bounds) {
 
     pthread_t thread1;
 
-    // start, end, sum
-    long long thread1_params[] = {start1, end1, 0};
-    long long thread2_params[] = {start2, end2, 0};
+    // start, end
+    long long thread1_params[] = {start1, end1};
+    long long thread2_params[] = {start2, end2};
 
     if (pthread_create(&thread1, NULL, calculate, thread1_params) != 0) {
         perror("pthread_create");
@@ -100,9 +101,5 @@ int sum_using_multithreading(struct Bounds bounds) {
     calculate(thread2_params);
     pthread_join(thread1, NULL);
 
-    thread1_sum = thread1_params[2];
-    thread2_sum = thread2_params[2];
-
-    printf("MULTITHREADING - sum: %lld\n", thread1_sum + thread2_sum);
     return 0;
 }

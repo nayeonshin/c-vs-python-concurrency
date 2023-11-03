@@ -1,5 +1,5 @@
-from os import getpid
 from multiprocessing import Process
+from os import getpid
 
 MESSAGE = "{} process: My PID is {}."
 
@@ -17,6 +17,7 @@ def main():
     # This code is executed by the parent process.
     print(MESSAGE.format("Parent", getpid()))
     print("Child process PID: ", child.pid)
+
     child.join()
 
 
