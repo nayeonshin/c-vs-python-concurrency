@@ -32,7 +32,7 @@
 - `extended_unix_concurrency.c`: With `MAX_NUMBER` being `1000000000`, one possible output is:
 
 ```
-MULTIPROCESSING - parent sum: 375000000250000000
+MULTIPROCESSING - Parent sum: 375000000250000000
 MULTIPROCESSING - child sum: 125000000250000000
 MULTITHREADING - sum: 500000000500000000
 ```
@@ -52,6 +52,81 @@ MULTITHREADING - sum: 500000000500000000
     - Execution time: `clock()` or `gettimeofday()` to record timestamps
     - CPU utilization: system calls or libraries like `getrusage` or `clock_gettime`.
   - Python
-    - Execution time: `timeit` module or third-party libraries like `pytest-benchmark` and `perf`
+    - Execution time: `timeit` module or third-party libraries like `pytest-benchmark` and `perf` --- probably `pref`
     - CPU utilization: `psutil` library, which provides functions to retrieve CPU usage
   - Execution time comparison, CPU utilization, thread activity, GIL contention, profiling and line-by-line analysis
+
+
+## Testing
+### C
+- `clock_gettime()`: used to retrieve the current time according to a specified clock
+  ```
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 400070000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 349450000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 349450000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 2 seconds & -652107000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 271121000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 271121000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 270017000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 263026000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 263026000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 2 seconds & -722341000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 261108000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 261108000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 274580000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 2 seconds & -732768000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 2 seconds & -732768000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 311547000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 263950000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 263950000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 281155000 nanoseconds
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 2 seconds & -734153000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 2 seconds & -734153000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 278114000 nanoseconds
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 268394000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 1 seconds & 268394000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 273923000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  MULTITHREADING - Elapsed time: 2 seconds & -735864000 nanoseconds
+  MULTIPROCESSING - Child sum: 125000000250000000
+  MULTITHREADING - Elapsed time: 2 seconds & -735864000 nanoseconds
+  MULTIPROCESSING - Parent sum: 375000000250000000
+  MULTIPROCESSING - Elapsed time: 1 seconds & 286125000 nanoseconds
+  MULTITHREADING - Sum: 125000000250000000
+  MULTITHREADING - Sum: 375000000250000000
+  ```

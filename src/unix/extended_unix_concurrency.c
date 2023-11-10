@@ -16,18 +16,45 @@ long long calculate_sum(long long start, long long end);
 int sum_using_multiprocessing(struct Bounds);
 int sum_using_multithreading(struct Bounds);
 
-const char* RESULT_MESSAGE = "MULTIPROCESSING - %s sum: %lld\n";
+const char* MULTIPROCESSING_MESSAGE = "MULTIPROCESSING - %s sum: %lld\n";
+const char* TIME_MESSAGE = "%s - Elapsed time: %lld seconds & %lld nanoseconds\n";
 
 int main()
 {
+    // struct timespec start_time, end_time;
+    // long long elapsed_sec, elapsed_nsec;
+
+    int multiprocessing_result, multithreading_result;
+
     struct Bounds bounds;
     bounds.start1 = 1;
     bounds.end1 = MAX_NUMBER / 2;
     bounds.start2 = bounds.end1 + 1;
     bounds.end2 = MAX_NUMBER;
 
-    int multiprocessing_result = sum_using_multiprocessing(bounds);
-    int multithreading_result = sum_using_multithreading(bounds);
+    // Repeats 10 times for testing
+    // for (int i = 0; i < 10; i++) {
+        // Measures time for multiprocessing
+        // clock_gettime(CLOCK_MONOTONIC, &start_time);
+        multiprocessing_result = sum_using_multiprocessing(bounds);
+        // clock_gettime(CLOCK_MONOTONIC, &end_time);
+
+        // Calculates elapsed time in seconds and nanoseconds
+        // elapsed_sec = end_time.tv_sec - start_time.tv_sec;
+        // elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
+
+        // printf(TIME_MESSAGE, "MULTIPROCESSING", elapsed_sec, elapsed_nsec);
+
+        // Measures time for multithreading
+        // clock_gettime(CLOCK_MONOTONIC, &start_time);
+        multithreading_result = sum_using_multithreading(bounds);
+        // clock_gettime(CLOCK_MONOTONIC, &end_time);
+
+        // elapsed_sec = end_time.tv_sec - start_time.tv_sec;
+        // elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
+
+        // printf(TIME_MESSAGE, "MULTITHREADING", elapsed_sec, elapsed_nsec);
+    // }
 
     return multiprocessing_result & multithreading_result;
 }
@@ -47,7 +74,7 @@ long long calculate_sum_in_range(long long start, long long end) {
 void *calculate(void *arg) {
     long long *params = (long long*) arg;
     long long sum = calculate_sum_in_range(params[0], params[1]);
-    printf("MULTITHREADING - sum: %lld\n", sum);
+    printf("MULTITHREADING - Sum: %lld\n", sum);
     return NULL;
 }
 
@@ -67,13 +94,13 @@ int sum_using_multiprocessing(struct Bounds bounds) {
     if (child_pid == 0) {
         // Child process calculates the sum for its portion.
         child_sum = calculate_sum_in_range(child_start, child_end);
-        printf(RESULT_MESSAGE, "child", child_sum);
+        printf(MULTIPROCESSING_MESSAGE, "Child", child_sum);
 
         exit(0);
     } else {
         // Parent process calculates the sum for its portion.
         parent_sum = calculate_sum_in_range(parent_start, parent_end);
-        printf(RESULT_MESSAGE, "parent", parent_sum);
+        printf(MULTIPROCESSING_MESSAGE, "Parent", parent_sum);
 
         // Waits for the child process to finish
         wait(NULL);
