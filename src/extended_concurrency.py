@@ -54,7 +54,7 @@ def sum_using_multithreading(bounds: tuple[int]) -> None:
     thread2.join()
 
     end_time = time()
-    message = "Total" + TIME_MESSAGE[0].lower() + TIME_MESSAGE[1:]
+    message = "Total " + TIME_MESSAGE[0].lower() + TIME_MESSAGE[1:]
     print(message.format(end_time - start_time))
 
 
