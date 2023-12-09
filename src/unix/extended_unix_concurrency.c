@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 #include <pthread.h>
 
 #define MAX_NUMBER 1000000000 // The upper limit for sum
@@ -17,12 +18,12 @@ int sum_using_multiprocessing(struct Bounds);
 int sum_using_multithreading(struct Bounds);
 
 const char* MULTIPROCESSING_MESSAGE = "MULTIPROCESSING - %s sum: %lld\n";
-const char* TIME_MESSAGE = "%s - Elapsed time: %lld seconds & %lld nanoseconds\n";
+const char* TIME_MESSAGE = "%s - Elapsed time: %lld second(s) & %lld nanoseconds\n";
 
 int main()
 {
-    // struct timespec start_time, end_time;
-    // long long elapsed_sec, elapsed_nsec;
+    struct timespec start_time, end_time;
+    long long elapsed_sec, elapsed_nsec;
 
     int multiprocessing_result, multithreading_result;
 
@@ -33,28 +34,28 @@ int main()
     bounds.end2 = MAX_NUMBER;
 
     // Repeats 10 times for testing
-    // for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) {
         // Measures time for multiprocessing
-        // clock_gettime(CLOCK_MONOTONIC, &start_time);
+        clock_gettime(CLOCK_MONOTONIC, &start_time);
         multiprocessing_result = sum_using_multiprocessing(bounds);
-        // clock_gettime(CLOCK_MONOTONIC, &end_time);
+        clock_gettime(CLOCK_MONOTONIC, &end_time);
 
         // Calculates elapsed time in seconds and nanoseconds
-        // elapsed_sec = end_time.tv_sec - start_time.tv_sec;
-        // elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
+        elapsed_sec = end_time.tv_sec - start_time.tv_sec;
+        elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
 
-        // printf(TIME_MESSAGE, "MULTIPROCESSING", elapsed_sec, elapsed_nsec);
+        printf(TIME_MESSAGE, "MULTIPROCESSING", elapsed_sec, elapsed_nsec);
 
         // Measures time for multithreading
-        // clock_gettime(CLOCK_MONOTONIC, &start_time);
+        clock_gettime(CLOCK_MONOTONIC, &start_time);
         multithreading_result = sum_using_multithreading(bounds);
-        // clock_gettime(CLOCK_MONOTONIC, &end_time);
+        clock_gettime(CLOCK_MONOTONIC, &end_time);
 
-        // elapsed_sec = end_time.tv_sec - start_time.tv_sec;
-        // elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
+        elapsed_sec = end_time.tv_sec - start_time.tv_sec;
+        elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
 
-        // printf(TIME_MESSAGE, "MULTITHREADING", elapsed_sec, elapsed_nsec);
-    // }
+        printf(TIME_MESSAGE, "MULTITHREADING", elapsed_sec, elapsed_nsec);
+    }
 
     return multiprocessing_result & multithreading_result;
 }
