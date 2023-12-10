@@ -16,7 +16,7 @@ def calculate_for_process(start: int, end: int, name: str) -> None:
     result = calculate_sum_in_range(start, end)
     print(f"MULTIPROCESSING - {name} sum: {result}")
     end_time = time()
-    print(TIME_MESSAGE.format("{name} process", end_time - start_time))
+    print(TIME_MESSAGE.format(f"{name} process", end_time - start_time))
     
 
 def calculate_for_thread(start: int, end: int, name: str) -> None:
@@ -24,7 +24,7 @@ def calculate_for_thread(start: int, end: int, name: str) -> None:
     result = calculate_sum_in_range(start, end)
     print(f"MULTITHREADING - sum: {result}")
     end_time = time()
-    print(TIME_MESSAGE.format("{name}", end_time - start_time))
+    print(TIME_MESSAGE.format(name, end_time - start_time))
 
 
 def sum_using_multiprocessing(bounds: tuple[str]) -> None:
