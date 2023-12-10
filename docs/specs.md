@@ -1,4 +1,5 @@
 # Hardware
+
 ```
 nayeon@CLAPP-222-PC17:~/Desktop$ sudo lshw
 [sudo] password for nayeon:
@@ -562,6 +563,7 @@ capabilities: platform
 ```
 
 # Software
+
 ```
 nayeon@CLAPP-222-PC17:~/Desktop/c-vs-python-concurrency/docs$ lsb_release -a
 No LSB modules are available.
@@ -572,4 +574,3 @@ Codename: jammy
 nayeon@CLAPP-222-PC17:~/Desktop/c-vs-python-concurrency/docs$ python3 --version
 Python 3.10.6
 ```
-

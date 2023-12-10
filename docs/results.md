@@ -1,4 +1,5 @@
 # C
+
 ```
 MULTIPROCESSING - Child sum: 125000000250000000
 MULTIPROCESSING - Parent sum: 375000000250000000
@@ -63,6 +64,7 @@ MULTITHREADING - Elapsed time: 1 second(s) & 380669479 nanoseconds
 ```
 
 # Python
+
 ```
 MULTIPROCESSING - parent sum: 375000000250000000
 Elapsed time: 7.3630 seconds
@@ -157,6 +159,7 @@ Total elapsed time: 13.0729 seconds
 ```
 
 # Python with GIL disabled
+
 ```
 MULTIPROCESSING - child sum: 125000000250000000
 Elapsed time: 9.0567 seconds
@@ -249,4 +252,3 @@ MULTITHREADING - sum: 125000000250000000
 Elapsed time: 8.5921 seconds
 Total elapsed time: 8.5924 seconds
 ```
-
