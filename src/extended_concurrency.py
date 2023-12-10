@@ -11,24 +11,19 @@ def calculate_sum_in_range(start: int, end: int) -> int:
 
 
 def calculate_for_process(start: int, end: int, name: str) -> None:
-    start_time = time()
     result = calculate_sum_in_range(start, end)
-    end_time = time()
     print(f"MULTIPROCESSING - {name} sum: {result}")
-    print(TIME_MESSAGE.format(end_time - start_time))
-
+    
 
 def calculate_for_thread(start: int, end: int) -> None:
-    start_time = time()
     result = calculate_sum_in_range(start, end)
-    end_time = time()
     print(f"MULTITHREADING - sum: {result}")
-    print(TIME_MESSAGE.format(end_time - start_time))
 
 
 def sum_using_multiprocessing(bounds: tuple[str]) -> None:
     child_start, child_end, parent_start, parent_end = bounds
 
+    start_time = time()
     child = Process(
         target=calculate_for_process, args=(child_start, child_end, "child")
     )
@@ -37,15 +32,17 @@ def sum_using_multiprocessing(bounds: tuple[str]) -> None:
     calculate_for_process(parent_start, parent_end, "parent")
 
     child.join()
+    end_time = time()
+
+    print(TIME_MESSAGE.format(end_time - start_time))
 
 
 def sum_using_multithreading(bounds: tuple[int]) -> None:
     start1, end1, start2, end2 = bounds
 
+    start_time = time()
     thread1 = Thread(target=calculate_for_thread, args=(start1, end1))
     thread2 = Thread(target=calculate_for_thread, args=(start2, end2))
-
-    start_time = time()
 
     thread1.start()
     thread2.start()
@@ -54,8 +51,8 @@ def sum_using_multithreading(bounds: tuple[int]) -> None:
     thread2.join()
 
     end_time = time()
-    message = "Total " + TIME_MESSAGE[0].lower() + TIME_MESSAGE[1:]
-    print(message.format(end_time - start_time))
+    
+    print(TIME_MESSAGE.format(end_time - start_time))
 
 
 if __name__ == "__main__":
