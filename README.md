@@ -27,16 +27,6 @@
 - Python bytecode is the low-level representation of Python code executed by the Python interpreter.
 - The GIL is released during I/O operations, which is why multithreading can still be effective for I/O-bound tasks where the threads spend a significant amount of time waiting for I/O operations to complete.
 
-## Outputs
-
-- `extended_unix_concurrency.c`: With `MAX_NUMBER` being `1000000000`, one possible output is:
-
-```
-MULTIPROCESSING - Parent sum: 375000000250000000
-MULTIPROCESSING - child sum: 125000000250000000
-MULTITHREADING - sum: 500000000500000000
-```
-
 ## GIL (Global Interpreter Lock)
 
 - The actual computation of the sum within the `calculate_sum_in_range()` function in `extended_concurrency.py` is still serialized.
@@ -44,6 +34,3 @@ MULTITHREADING - sum: 500000000500000000
   - While the threads can perform other operations concurrently, such as function calls, print statements, and so on, the actual computation of the sum (the `sum(range(start, end + 1))` part) is restricted by the GIL.
 - In other words, while the threads can run concurrently for I/O-bound tasks, when it comes to CPU-bound tasks like calculating the sum, the GIL prevents full utilization of multiple CPU cores.
 - In this specific case, multithreading may not provide significant performance benefits for CPU-bound tasks due to the GIL.
-
-# TODO
-- [ ] Track execution times for each process and thread
