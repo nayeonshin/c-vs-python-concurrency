@@ -41,7 +41,7 @@ def sum_using_multiprocessing(bounds: tuple[str]) -> None:
     child.join()
     end_time = time()
 
-    print(TOTAL_TIME_MESSAGE.format(end_time - start_time))
+    print(TOTAL_TIME_MESSAGE.format("MULTIPROCESSING", end_time - start_time))
 
 
 def sum_using_multithreading(bounds: tuple[int]) -> None:
@@ -59,7 +59,7 @@ def sum_using_multithreading(bounds: tuple[int]) -> None:
 
     end_time = time()
     
-    print(TOTAL_TIME_MESSAGE.format(end_time - start_time))
+    print(TOTAL_TIME_MESSAGE.format("MULTITHREADING", end_time - start_time))
 
 
 if __name__ == "__main__":

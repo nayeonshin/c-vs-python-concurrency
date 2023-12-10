@@ -20,7 +20,7 @@ int sum_using_multithreading(struct Bounds);
 
 const char *MULTIPROCESSING_MESSAGE = "MULTIPROCESSING - %s sum: %lld\n";
 const char *TOTAL_TIME_MESSAGE = "%s - Total elapsed time: %lld second(s) & %lld nanoseconds\n";
-const char *TIME_MESSAGE = "%s - Elapsed time: %lld second(s)";
+const char *TIME_MESSAGE = "%s - Elapsed time: %lld second(s)\n";
 
 int main()
 {
