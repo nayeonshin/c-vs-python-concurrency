@@ -48,7 +48,8 @@ int main()
         elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
 
         printf(TOTAL_TIME_MESSAGE, "MULTIPROCESSING", elapsed_sec, elapsed_nsec);
-
+    }
+    for (int i = 0; i < 10; i++) {
         // Measures time for multithreading
         clock_gettime(CLOCK_MONOTONIC, &start_time);
         multithreading_result = sum_using_multithreading(bounds);
