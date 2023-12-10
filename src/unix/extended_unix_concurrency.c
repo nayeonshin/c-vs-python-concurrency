@@ -19,7 +19,7 @@ int sum_using_multiprocessing(struct Bounds);
 int sum_using_multithreading(struct Bounds);
 
 const char *MULTIPROCESSING_MESSAGE = "MULTIPROCESSING - %s sum: %lld\n";
-const char *TOTAL_TIME_MESSAGE = "%s - Total elapsed time: %lld second(s) & %lld nanoseconds\n";
+const char *TOTAL_TIME_MESSAGE = "Total elapsed time: %lld second(s) & %lld nanoseconds\n";
 const char *TIME_MESSAGE = "%s - Elapsed time: %lld second(s)\n";
 
 int main()
@@ -35,6 +35,7 @@ int main()
     bounds.start2 = bounds.end1 + 1;
     bounds.end2 = MAX_NUMBER;
 
+    printf("MULTIPROCESSING\n");
     // Repeats 10 times for testing
     for (int i = 0; i < 10; i++)
     {
@@ -47,8 +48,10 @@ int main()
         elapsed_sec = end_time.tv_sec - start_time.tv_sec;
         elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
 
-        printf(TOTAL_TIME_MESSAGE, "MULTIPROCESSING", elapsed_sec, elapsed_nsec);
+        printf(TOTAL_TIME_MESSAGE, elapsed_sec, elapsed_nsec);
     }
+
+    printf("MULTITHREADING\n");
     for (int i = 0; i < 10; i++) {
         // Measures time for multithreading
         clock_gettime(CLOCK_MONOTONIC, &start_time);
@@ -58,7 +61,7 @@ int main()
         elapsed_sec = end_time.tv_sec - start_time.tv_sec;
         elapsed_nsec = end_time.tv_nsec - start_time.tv_nsec;
 
-        printf(TOTAL_TIME_MESSAGE, "MULTITHREADING", elapsed_sec, elapsed_nsec);
+        printf(TOTAL_TIME_MESSAGE, elapsed_sec, elapsed_nsec);
     }
 
     return multiprocessing_result & multithreading_result;
@@ -110,15 +113,15 @@ int sum_using_multiprocessing(struct Bounds bounds)
     {
         // Measures time for child process
         clock_gettime(CLOCK_MONOTONIC, &child_start_time);
-
         // Child process calculates the sum for its portion.
         child_sum = calculate_sum_in_range(child_start, child_end);
         printf(MULTIPROCESSING_MESSAGE, "Child", child_sum);
-        exit(0);
-
         clock_gettime(CLOCK_MONOTONIC, &parent_end_time);
+
         elapsed_sec = parent_end_time.tv_sec - parent_start_time.tv_sec;
-        printf(TIME_MESSAGE, "Parent process", elapsed_sec);
+        printf(TIME_MESSAGE, "Child process", elapsed_sec);
+
+        exit(0);
     }
     else
     {

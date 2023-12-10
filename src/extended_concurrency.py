@@ -3,7 +3,7 @@ from threading import Thread
 from time import time
 
 MAX_NUMBER = 1000000000  # The upper limit for the sum
-TOTAL_TIME_MESSAGE = "{} - Total elapsed time: {:.4f} seconds"
+TOTAL_TIME_MESSAGE = "Total elapsed time: {:.4f} seconds"
 TIME_MESSAGE = "{} - Elapsed time: {:.4f} seconds"
 
 
@@ -14,7 +14,7 @@ def calculate_sum_in_range(start: int, end: int) -> int:
 def calculate_for_process(start: int, end: int, name: str) -> None:
     start_time = time()
     result = calculate_sum_in_range(start, end)
-    print(f"MULTIPROCESSING - {name} sum: {result}")
+    print(f"{name} sum: {result}")
     end_time = time()
     print(TIME_MESSAGE.format(f"{name} process", end_time - start_time))
     
@@ -22,7 +22,7 @@ def calculate_for_process(start: int, end: int, name: str) -> None:
 def calculate_for_thread(start: int, end: int, name: str) -> None:
     start_time = time()
     result = calculate_sum_in_range(start, end)
-    print(f"MULTITHREADING - sum: {result}")
+    print(f"{name} sum: {result}")
     end_time = time()
     print(TIME_MESSAGE.format(name, end_time - start_time))
 
@@ -41,7 +41,7 @@ def sum_using_multiprocessing(bounds: tuple[str]) -> None:
     child.join()
     end_time = time()
 
-    print(TOTAL_TIME_MESSAGE.format("MULTIPROCESSING", end_time - start_time))
+    print(TOTAL_TIME_MESSAGE.format(end_time - start_time))
 
 
 def sum_using_multithreading(bounds: tuple[int]) -> None:
@@ -59,13 +59,16 @@ def sum_using_multithreading(bounds: tuple[int]) -> None:
 
     end_time = time()
     
-    print(TOTAL_TIME_MESSAGE.format("MULTITHREADING", end_time - start_time))
+    print(TOTAL_TIME_MESSAGE.format(end_time - start_time))
 
 
 if __name__ == "__main__":
     bounds = 1, MAX_NUMBER // 2, (MAX_NUMBER // 2) + 1, MAX_NUMBER
 
+    print("MULTIPROCESSING")
     for _ in range(10):
     	sum_using_multiprocessing(bounds)
+    
+    print("MULTITHREADING")
     for _ in range(10):
     	sum_using_multithreading(bounds)
