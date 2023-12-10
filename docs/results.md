@@ -1,164 +1,252 @@
 # C
-- ```
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 400070000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 349450000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 349450000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 2 seconds & -652107000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 271121000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 271121000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 270017000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 263026000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 263026000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 2 seconds & -722341000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 261108000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 261108000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 274580000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 2 seconds & -732768000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 2 seconds & -732768000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 311547000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 263950000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 263950000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 281155000 nanoseconds
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 2 seconds & -734153000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 2 seconds & -734153000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 278114000 nanoseconds
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 268394000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 1 seconds & 268394000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 273923000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  MULTITHREADING - Elapsed time: 2 seconds & -735864000 nanoseconds
-  MULTIPROCESSING - Child sum: 125000000250000000
-  MULTITHREADING - Elapsed time: 2 seconds & -735864000 nanoseconds
-  MULTIPROCESSING - Parent sum: 375000000250000000
-  MULTIPROCESSING - Elapsed time: 1 seconds & 286125000 nanoseconds
-  MULTITHREADING - Sum: 125000000250000000
-  MULTITHREADING - Sum: 375000000250000000
-  ```
+```
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Elapsed time: 1 second(s) & 476580825 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 2 second(s) & -554533908 nanoseconds
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Elapsed time: 1 second(s) & 415523956 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 2 second(s) & -618495941 nanoseconds
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Elapsed time: 1 second(s) & 433480253 nanoseconds
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 467188140 nanoseconds
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Elapsed time: 2 second(s) & -533484040 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 428134227 nanoseconds
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Elapsed time: 2 second(s) & -619859019 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 396681346 nanoseconds
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Elapsed time: 2 second(s) & -619393150 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 354952828 nanoseconds
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Elapsed time: 1 second(s) & 367650380 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 2 second(s) & -618229598 nanoseconds
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Elapsed time: 1 second(s) & 349715426 nanoseconds
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 350793255 nanoseconds
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Elapsed time: 2 second(s) & -610748699 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 408640068 nanoseconds
+MULTIPROCESSING - Parent sum: 375000000250000000
+MULTIPROCESSING - Child sum: 125000000250000000
+MULTIPROCESSING - Elapsed time: 2 second(s) & -566690842 nanoseconds
+MULTITHREADING - Sum: 125000000250000000
+MULTITHREADING - Sum: 375000000250000000
+MULTITHREADING - Elapsed time: 1 second(s) & 380669479 nanoseconds
+```
+
 # Python
-- ```
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 10.3505 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 10.8930 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 9.9217 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 10.4201 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 10.0054 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 10.4874 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 10.8732 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 11.3635 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 12.7589 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 13.2249 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 11.7908 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 12.3251 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 10.5399 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 11.0465 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 14.0985 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 14.7141 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 12.9177 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 12.7725 seconds
-  MULTIPROCESSING - child sum: 125000000250000000
-  Elapsed time: 10.9024 seconds
-  MULTIPROCESSING - parent sum: 375000000250000000
-  Elapsed time: 11.4107 seconds
-  MULTITHREADING - sum: 125000000250000000
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 20.5378 seconds
-  Elapsed time: 10.3211 seconds
-  Total elapsed time: 20.5383 seconds
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 10.5405 seconds
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.2845 seconds
-  Total elapsed time: 20.8253 seconds
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 20.4475 seconds
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.1938 seconds
-  Total elapsed time: 20.4478 seconds
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 10.2529 seconds
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.3536 seconds
-  Total elapsed time: 20.6068 seconds
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 10.2210 seconds
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.2929 seconds
-  Total elapsed time: 20.5142 seconds
-  MULTITHREADING - sum: 375000000250000000
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 20.4080 seconds
-  Elapsed time: 10.2137 seconds
-  Total elapsed time: 20.4082 seconds
-  MULTITHREADING - sum: 125000000250000000
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 20.5610 seconds
-  Elapsed time: 10.2405 seconds
-  Total elapsed time: 20.5613 seconds
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 20.4908 seconds
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.3205 seconds
-  Total elapsed time: 20.4911 seconds
-  MULTITHREADING - sum: 125000000250000000
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.6589 seconds
-  Elapsed time: 20.9045 seconds
-  Total elapsed time: 20.9048 seconds
-  MULTITHREADING - sum: 125000000250000000
-  Elapsed time: 22.2828 seconds
-  MULTITHREADING - sum: 375000000250000000
-  Elapsed time: 10.8728 seconds
-  Total elapsed time: 22.2830 seconds
-  ```
+```
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 7.3630 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 7.4083 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 7.0849 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 7.1536 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 7.3612 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 7.5183 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 7.0220 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 7.0980 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 6.9711 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 6.9902 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 6.9323 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 6.9741 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 7.1157 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 7.1924 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 6.9263 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 6.9645 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 7.0355 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 7.0900 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 6.9027 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 6.9158 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 6.5731 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.5690 seconds
+Total elapsed time: 13.1425 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 13.4804 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 7.0222 seconds
+Total elapsed time: 13.4809 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 16.8152 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 16.6147 seconds
+Total elapsed time: 33.4304 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 11.5539 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.5817 seconds
+Total elapsed time: 18.1359 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 13.8358 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.7334 seconds
+Total elapsed time: 13.8360 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 12.9098 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.3604 seconds
+Total elapsed time: 12.9100 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 12.9468 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.4104 seconds
+Total elapsed time: 12.9471 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 13.0759 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.4954 seconds
+Total elapsed time: 13.0763 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 12.9943 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.5533 seconds
+Total elapsed time: 12.9946 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 13.0727 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 6.5215 seconds
+Total elapsed time: 13.0729 seconds
+```
+
+# Python with GIL disabled
+```
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 9.0567 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 9.0712 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 9.0706 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 9.2631 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.7804 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.7921 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.6040 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.7070 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.6745 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.6887 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.7330 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.8881 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.6461 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.6804 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.6282 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.6612 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.6115 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.6265 seconds
+MULTIPROCESSING - child sum: 125000000250000000
+Elapsed time: 8.9209 seconds
+MULTIPROCESSING - parent sum: 375000000250000000
+Elapsed time: 8.9468 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.6314 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.6856 seconds
+Total elapsed time: 8.6873 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 9.0506 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 9.7316 seconds
+Total elapsed time: 9.7322 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.5475 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.5731 seconds
+Total elapsed time: 8.5736 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 9.4220 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 9.4345 seconds
+Total elapsed time: 9.4349 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.5784 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.5936 seconds
+Total elapsed time: 8.5941 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.7625 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 9.2059 seconds
+Total elapsed time: 9.2065 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.6821 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.7250 seconds
+Total elapsed time: 8.7256 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.5427 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.5979 seconds
+Total elapsed time: 8.5985 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.5545 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.5547 seconds
+Total elapsed time: 8.5552 seconds
+MULTITHREADING - sum: 375000000250000000
+Elapsed time: 8.5873 seconds
+MULTITHREADING - sum: 125000000250000000
+Elapsed time: 8.5921 seconds
+Total elapsed time: 8.5924 seconds
+```
+
