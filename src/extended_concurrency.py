@@ -69,6 +69,6 @@ if __name__ == "__main__":
     for _ in range(10):
     	sum_using_multiprocessing(bounds)
     
-    print("\n\n\nMULTITHREADING")
+    print("\n\nMULTITHREADING")
     for _ in range(10):
     	sum_using_multithreading(bounds)

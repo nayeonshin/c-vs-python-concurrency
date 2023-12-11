@@ -51,7 +51,7 @@ int main()
         printf(TOTAL_TIME_MESSAGE, elapsed_sec, elapsed_nsec);
     }
 
-    printf("\n\n\nMULTITHREADING\n");
+    printf("\n\nMULTITHREADING\n");
     for (int i = 0; i < 10; i++)
     {
         // Measures time for multithreading
