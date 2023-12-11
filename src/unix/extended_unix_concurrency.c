@@ -85,7 +85,7 @@ void *calculate(void *arg)
 {
     long long *params = (long long *)arg;
     long long sum = calculate_sum_in_range(params[0], params[1]);
-    printf(RESULT_MESSAGE, params[2], sum);
+    printf("Thread %lld sum: %lld\n", params[2], sum);
     return NULL;
 }
 
@@ -150,9 +150,9 @@ int sum_using_multithreading(struct Bounds bounds)
 
     pthread_t thread1;
 
-    // start, end, thread name
-    long long thread1_params[] = {start1, end1, "Thread 1"};
-    long long thread2_params[] = {start2, end2, "Thread 2"};
+    // start, end, thread number
+    long long thread1_params[] = {start1, end1, 1};
+    long long thread2_params[] = {start2, end2, 2};
 
     // Measures time for thread 1
     clock_gettime(CLOCK_MONOTONIC, &thread1_start_time);
