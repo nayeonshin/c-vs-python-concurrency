@@ -18,6 +18,7 @@ long long calculate_sum(long long start, long long end);
 int sum_using_multiprocessing(struct Bounds);
 int sum_using_multithreading(struct Bounds);
 
+const char *RESULT_MESSAGE = "%s sum: %lld\n";
 const char *TOTAL_TIME_MESSAGE = "Total elapsed time: %lld second(s) & %lld nanoseconds\n";
 const char *TIME_MESSAGE = "%s - Elapsed time: %lld second(s)\n";
 
@@ -84,7 +85,7 @@ void *calculate(void *arg)
 {
     long long *params = (long long *)arg;
     long long sum = calculate_sum_in_range(params[0], params[1]);
-    printf("Sum: %lld\n", sum);
+    printf(RESULT_MESSAGE, params[2], sum);
     return NULL;
 }
 
@@ -114,7 +115,7 @@ int sum_using_multiprocessing(struct Bounds bounds)
         clock_gettime(CLOCK_MONOTONIC, &child_start_time);
         // Child process calculates the sum for its portion.
         child_sum = calculate_sum_in_range(child_start, child_end);
-        printf("Sum: %lld\n", child_sum);
+        printf(RESULT_MESSAGE, "Child process", child_sum);
         clock_gettime(CLOCK_MONOTONIC, &parent_end_time);
 
         elapsed_sec = parent_end_time.tv_sec - parent_start_time.tv_sec;
@@ -126,7 +127,7 @@ int sum_using_multiprocessing(struct Bounds bounds)
     {
         // Parent process calculates the sum for its portion.
         parent_sum = calculate_sum_in_range(parent_start, parent_end);
-        printf("Sum: %lld\n", parent_sum);
+        printf(RESULT_MESSAGE, "Parent process", parent_sum);
         // Waits for the child process to finish
         wait(NULL);
 
@@ -149,9 +150,9 @@ int sum_using_multithreading(struct Bounds bounds)
 
     pthread_t thread1;
 
-    // start, end
-    long long thread1_params[] = {start1, end1};
-    long long thread2_params[] = {start2, end2};
+    // start, end, thread name
+    long long thread1_params[] = {start1, end1, "Thread 1"};
+    long long thread2_params[] = {start2, end2, "Thread 2"};
 
     // Measures time for thread 1
     clock_gettime(CLOCK_MONOTONIC, &thread1_start_time);
