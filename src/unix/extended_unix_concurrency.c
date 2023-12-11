@@ -19,8 +19,8 @@ int sum_using_multiprocessing(struct Bounds);
 int sum_using_multithreading(struct Bounds);
 
 const char *RESULT_MESSAGE = "%s sum: %lld\n";
-const char *TOTAL_TIME_MESSAGE = "Total elapsed time: %lld second(s) & %lld nanoseconds\n";
 const char *TIME_MESSAGE = "%s - Elapsed time: %lld second(s)\n";
+const char *TOTAL_TIME_MESSAGE = "Total elapsed time: %lld second(s) & %lld nanoseconds\n\n";
 
 int main()
 {
@@ -51,8 +51,9 @@ int main()
         printf(TOTAL_TIME_MESSAGE, elapsed_sec, elapsed_nsec);
     }
 
-    printf("MULTITHREADING\n");
-    for (int i = 0; i < 10; i++) {
+    printf("\n\n\nMULTITHREADING\n");
+    for (int i = 0; i < 10; i++)
+    {
         // Measures time for multithreading
         clock_gettime(CLOCK_MONOTONIC, &start_time);
         multithreading_result = sum_using_multithreading(bounds);

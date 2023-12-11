@@ -3,7 +3,7 @@ from threading import Thread
 from time import time
 
 MAX_NUMBER = 1000000000  # The upper limit for the sum
-TOTAL_TIME_MESSAGE = "Total elapsed time: {:.4f} seconds"
+TOTAL_TIME_MESSAGE = "Total elapsed time: {:.4f} seconds\n"
 TIME_MESSAGE = "{} - Elapsed time: {:.4f} seconds"
 
 
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     for _ in range(10):
     	sum_using_multiprocessing(bounds)
     
-    print("MULTITHREADING")
+    print("\n\n\nMULTITHREADING")
     for _ in range(10):
     	sum_using_multithreading(bounds)

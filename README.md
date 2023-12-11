@@ -26,6 +26,7 @@
 - The "can't pickle" error in Python typically occurs when you're trying to pass a function or an object that can't be serialized (pickled) to a separate process, which is necessary for multiprocessing in Python.
 - Python bytecode is the low-level representation of Python code executed by the Python interpreter.
 - The GIL is released during I/O operations, which is why multithreading can still be effective for I/O-bound tasks where the threads spend a significant amount of time waiting for I/O operations to complete.
+- Python's print function adds a newline character (`\n`) by default at the end of the output.
 
 ## GIL (Global Interpreter Lock)
 
