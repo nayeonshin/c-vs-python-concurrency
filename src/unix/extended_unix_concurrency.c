@@ -126,7 +126,7 @@ int sum_using_multiprocessing(struct Bounds bounds)
     {
         // Parent process calculates the sum for its portion.
         parent_sum = calculate_sum_in_range(parent_start, parent_end);
-        printf("Sum: %lld\n", child_sum);
+        printf("Sum: %lld\n", parent_sum);
         // Waits for the child process to finish
         wait(NULL);
 
